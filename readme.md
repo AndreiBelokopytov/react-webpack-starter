@@ -9,6 +9,6 @@
 
 ## Instructions
 
-`npm start` launches webpack dev server
-`npm build` produces production-ready bundle
-`npm tests` launches unit tests in Chrome
+* `npm start` launches webpack dev server
+* `npm build` produces production-ready bundle
+* `npm tests` launches unit tests in Chrome
