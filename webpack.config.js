@@ -20,6 +20,7 @@ const config = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -47,7 +48,7 @@ const config = {
     new ExtractTextPlugin('style.css')
   ],
   devtool: productionMode ? '' : 'eval-source-map',
-  watch: productionMode ? false : true
+  watch: !productionMode
 };
 
 module.exports = config;
