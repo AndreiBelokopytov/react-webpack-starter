@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   width="185.17194"
+   height="106.89132"
+   viewBox="0 0 185.17194 106.89132"
+   sodipodi:docname="InfinityEulerSymbol2.svg">
+  <metadata
+     id="metadata8">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs6" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     id="namedview4"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:zoom="2.3733646"
+     inkscape:cx="98.047169"
+     inkscape:cy="51.908693"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <path
+     style="fill:#000000"
+     d="M 39.617117,105.11399 C 13.289719,98.034153 -3.7758124,72.078313 0.71672861,45.948403 2.6466726,34.723293 6.6397766,26.513553 14.169827,18.289103 c 26.600385,-29.053401 73.623811,-19.8232086 88.238403,17.32025 1.1669,2.9657 2.7029,11.05638 3.41331,17.97925 2.49773,24.3397 11.88426,34.40096 33.29905,35.69264 8.88549,0.53595 10.97776,0.24844 15.625,-2.14715 8.06881,-4.15936 11.78159,-8.30909 15.30199,-17.10289 3.81651,-9.53348 4.06394,-17.87457 0.73606,-24.81406 -5.3219,-11.09755 -14.28826,-16.85642 -27.45225,-17.6319 -8.4698,-0.49894 -13.16006,0.68045 -19.1728,4.82112 -6.45396,4.44451 -15.9537,0.23583 -19.81841,-8.78018 -3.26635,-7.62007 -2.09735,-14.4419986 3.12901,-18.2600346 7.11446,-5.19734698 13.06516,-6.28728098 25.57061,-4.68352398 18.45329,2.36653998 28.02677,6.78289798 38.13947,17.59419858 18.87661,20.18063 18.62465,51.66226 -0.57598,71.96409 -23.46892,24.814917 -62.57239,21.246667 -82.361352,-7.51562 -5.41149,-7.86532 -7.09746,-13.42192 -8.59889,-28.34005 -2.0394,-20.26351 -5.23756,-25.98419 -18.19836,-32.55206 -6.26546,-3.17501 -8.49669,-3.67706 -14.375001,-3.23454 -9.569228,0.72037 -21.704929,6.39963 -26.434009,12.37058 -13.2283904,16.70221 -7.1194,43.86735 11.623001,51.68457 9.666196,4.03165 22.272489,1.3615 25.941849,-5.49476 1.13304,-2.11709 2.59266,-2.56689 8.32978,-2.56689 6.2441,0 7.39099,0.43497 11.20602,4.25 4.73009,4.73009 5.44591,9.25477 2.54752,16.10265 -2.57362,6.080537 -5.83675,8.272387 -15.3004,10.277297 -10.64881,2.256 -16.670503,2.23034 -25.366331,-0.10813 z"
+     id="path3338"
+     inkscape:connector-curvature="0" />
+</svg>

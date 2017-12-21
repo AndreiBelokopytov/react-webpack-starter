@@ -4,9 +4,18 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 const productionMode = process.env.NODE_ENV === 'production';
+const devPlugins = [
+  new HtmlWebpackPlugin({
+    template: './index.html'
+  }),
+  new ExtractTextPlugin('style.css')
+];
+const productionPlugins = [
+  new webpack.optimize.UglifyJsPlugin(),
+];
 
 const config = {
-  entry: './src/app.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
@@ -32,21 +41,29 @@ const config = {
                 sourceMap: !productionMode
               }
             },
-            'postcss-loader'
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: !productionMode
+              }
+            }
           ]
         })
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
       }
     ]
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: './index.html'
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: productionMode
-    }),
-    new ExtractTextPlugin('style.css')
-  ],
+  plugins: Array.prototype.concat.apply(devPlugins, productionMode ? productionPlugins : []),
   devtool: productionMode ? '' : 'eval-source-map',
   watch: !productionMode
 };

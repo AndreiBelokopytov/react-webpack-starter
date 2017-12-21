@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-require('./app.css');
+import App from './app/App';
+import './index.css';
+
+require('./index.css');
 
 ReactDOM.render(
-  <h1>Hello, world!</h1>,
+  <App/>,
   document.getElementById('app')
 );
