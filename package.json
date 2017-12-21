@@ -1,21 +1,32 @@
 {
-  "name": "react-test",
+  "name": "react-webapck-starter",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "repository": {
+    "url": "git+https://github.com/AndreiBelokopytov/react-webpack-starter",
+    "type": "git"
+  },
+  "main": "src/index.js",
   "scripts": {
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
-    "test": "karma start"
+    "test": "mocha-webpack \"tests/**/*.js\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": {
+    "name": "Andrei Belokopytov",
+    "email": "belokopytov87@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
-    "react": "^15.6.1"
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
   },
   "devDependencies": {
-    "@types/react": "^16.0.5",
+    "@types/react": "^16.0.31",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -25,21 +36,18 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "chai": "^4.1.2",
-    "chai-enzyme": "^0.8.0",
+    "chai-enzyme": "v1.0.0-beta.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
-    "enzyme": "^2.9.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^1.1.6",
     "html-webpack-plugin": "^2.30.1",
-    "karma": "^1.7.1",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-mocha": "^1.3.0",
-    "karma-mocha-reporter": "^2.2.4",
     "karma-sourcemap-loader": "^0.3.7",
-    "karma-webpack": "^2.0.4",
     "mocha": "^3.5.0",
+    "mocha-webpack": "^1.0.1",
     "postcss-loader": "^2.0.6",
-    "react-dom": "^15.6.1",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.5.5",
