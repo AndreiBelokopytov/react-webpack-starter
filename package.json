@@ -10,6 +10,8 @@
   "scripts": {
     "start": "webpack-dev-server",
     "build": "cross-env NODE_ENV=production webpack",
+    "lint": "semistandard --env mocha --verbose | snazzy",
+    "format": "semistandard --env mocha --fix --verbose | snazzy",
     "test": "mocha-webpack \"tests/**/*.js\""
   },
   "keywords": [
@@ -29,6 +31,7 @@
     "@types/react": "^16.0.31",
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.1.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
@@ -48,9 +51,17 @@
     "mocha": "^3.5.0",
     "mocha-webpack": "^1.0.1",
     "postcss-loader": "^2.0.6",
+    "semistandard": "^11.0.0",
+    "snazzy": "^7.0.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
+  },
+  "semistandard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "dist"
+    ]
   }
 }

@@ -6,6 +6,6 @@ import './index.css';
 require('./index.css');
 
 ReactDOM.render(
-  <App/>,
+  <App />,
   document.getElementById('app')
 );

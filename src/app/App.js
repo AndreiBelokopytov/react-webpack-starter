@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import logo from '../assets/img/eulers_infinity_sign.svg';
 
-function App() {
+function App () {
   return (
     <div>
       <h1>Hello World!</h1>
@@ -10,7 +10,7 @@ function App() {
         <img src={logo} width='185' height='106' className='logo' />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

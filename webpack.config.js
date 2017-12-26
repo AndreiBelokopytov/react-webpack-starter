@@ -14,7 +14,7 @@ const productionPlugins = [
   new webpack.DefinePlugin({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
   }),
-  new webpack.optimize.UglifyJsPlugin(),
+  new webpack.optimize.UglifyJsPlugin()
 ];
 
 const config = {
