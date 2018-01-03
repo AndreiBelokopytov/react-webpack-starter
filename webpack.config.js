@@ -1,14 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpack = require('webpack');
 
 const productionMode = process.env.NODE_ENV === 'production';
 const devPlugins = [
   new HtmlWebpackPlugin({
     template: './index.html'
-  }),
-  new ExtractTextPlugin('style.css')
+  })
 ];
 const productionPlugins = [
   new webpack.DefinePlugin({
@@ -29,29 +27,6 @@ const config = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                importLoaders: 1,
-                minimize: productionMode,
-                sourceMap: !productionMode
-              }
-            },
-            {
-              loader: 'postcss-loader',
-              options: {
-                sourceMap: !productionMode
-              }
-            }
-          ]
-        })
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
