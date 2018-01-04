@@ -2,7 +2,7 @@ import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
 import App from './App.js';
-import styles from './App.css'
+import styles from './App.scss'
 
 describe('<App />', () => {
   it('renders logo', () => {

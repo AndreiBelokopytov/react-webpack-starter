@@ -1,3 +1,9 @@
+$body-color: rgba(#ccc, .05);
+
+:global(body) {
+  background-color: $body-color;
+}
+
 :global(h1) {
   font-size: 56px;
   text-align: center;

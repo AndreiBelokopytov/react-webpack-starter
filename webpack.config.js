@@ -32,7 +32,6 @@ const config = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: [
@@ -47,6 +46,35 @@ const config = {
             },
             {
               loader: 'postcss-loader',
+              options: {
+                sourceMap: !productionMode
+              }
+            }
+          ]
+        })
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+              options: {
+                importLoaders: 2,
+                modules: true,
+                minimize: productionMode,
+                sourceMap: !productionMode
+              }
+            },
+            {
+              loader: 'postcss-loader',
+              options: {
+                sourceMap: !productionMode
+              }
+            },
+            {
+              loader: 'sass-loader',
               options: {
                 sourceMap: !productionMode
               }

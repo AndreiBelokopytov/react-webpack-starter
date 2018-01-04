@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.css';
+import styles from './App.scss';
 import logo from '../assets/img/eulers_infinity_sign.svg';
 
 function App () {
