@@ -40,6 +40,7 @@ const config = {
               loader: 'css-loader',
               options: {
                 importLoaders: 1,
+                modules: true,
                 minimize: productionMode,
                 sourceMap: !productionMode
               }

@@ -1,9 +1,9 @@
-h1 {
+:global(h1) {
   font-size: 56px;
   text-align: center;
 }
 
-.logo-container {
+.container {
   margin: 40px auto;
   text-align: center;
 }
