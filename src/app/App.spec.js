@@ -1,8 +1,8 @@
 import React from 'react';
 import {expect} from 'chai';
 import {shallow} from 'enzyme';
-import App from '../src/app/App.js';
-import styles from '../src/app/App.css'
+import App from './App.js';
+import styles from './App.css'
 
 describe('<App />', () => {
   it('renders logo', () => {

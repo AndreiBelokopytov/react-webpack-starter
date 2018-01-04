@@ -12,7 +12,7 @@
     "build": "cross-env NODE_ENV=production webpack",
     "lint": "semistandard --env mocha --verbose | snazzy",
     "format": "semistandard --env mocha --fix --verbose | snazzy",
-    "test": "mocha-webpack \"tests/**/*.js\""
+    "test": "mocha-webpack --include ./test/utils/setup.js \"src/**/*.spec.js\""
   },
   "keywords": [
     "react",
