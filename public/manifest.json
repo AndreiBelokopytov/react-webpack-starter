@@ -1,0 +1,20 @@
+{
+  "short_name": "React Webpack Starter",
+  "name": "React Webpack Starter",
+  "icons": [
+    {
+      "src": "img/icons/app-icon-128x128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/app-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

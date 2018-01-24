@@ -8,8 +8,8 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "cross-env NODE_ENV=production webpack",
+    "start": "gulp -f ./config/gulpfile.js dev",
+    "build": "cross-env NODE_ENV=production gulp -f ./config/gulpfile.js build",
     "lint": "semistandard --env mocha --verbose | snazzy",
     "format": "semistandard --env mocha --fix --verbose | snazzy",
     "test": "mocha-webpack --include ./test/utils/setup.js \"src/**/*.spec.js\""
@@ -38,14 +38,19 @@
     "babel-polyfill": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "browser-sync": "^2.23.5",
     "chai": "^4.1.2",
     "chai-enzyme": "v1.0.0-beta.0",
     "cross-env": "^5.0.5",
     "css-loader": "^0.28.7",
+    "del": "^3.0.0",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "extract-text-webpack-plugin": "^3.0.0",
     "file-loader": "^1.1.6",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.0.1",
+    "gulp-server-io": "^1.3.6",
     "html-webpack-plugin": "^2.30.1",
     "mocha": "^3.5.0",
     "mocha-webpack": "^1.0.1",
@@ -56,8 +61,8 @@
     "snazzy": "^7.0.0",
     "style-loader": "^0.18.2",
     "url-loader": "^0.6.2",
-    "webpack": "^3.5.5",
-    "webpack-dev-server": "^2.7.1"
+    "webpack": "^3.10.0",
+    "webpack-stream": "^4.0.0"
   },
   "semistandard": {
     "parser": "babel-eslint",
