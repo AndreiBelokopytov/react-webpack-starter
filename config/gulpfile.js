@@ -5,6 +5,7 @@ const gulp = require('gulp');
 const webpack = require('webpack-stream');
 const del = require('del');
 const browserSync = require('browser-sync').create();
+const swPrecache = require('sw-precache');
 const env = require('./env');
 const paths = require('./paths');
 
@@ -50,5 +51,24 @@ gulp.task('server', () => {
     .on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'copy:public', 'webpack:build'));
-gulp.task('dev', gulp.series('build', gulp.parallel('webpack:watch', 'server')));
+gulp.task('generate-service-worker', cb => {
+  swPrecache.write(path.join(paths.DIST_FOLDER, 'service-worker.js'), {
+    staticFileGlobs: [
+      path.join(paths.DIST_FOLDER) + '/**/*.{js,json,html,css,png,jpg,gif,svg,eot,ttf,woff}'
+    ],
+    stripPrefix: paths.DIST_FOLDER
+  }, cb);
+});
+
+gulp.task('build', gulp.series(
+  'clean',
+  'copy:public',
+  'webpack:build',
+  'generate-service-worker'
+));
+gulp.task('dev', gulp.series(
+  'clean',
+  'copy:public',
+  'webpack:build',
+  gulp.parallel('webpack:watch', 'server'
+)));

@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const common = require('./webpack.common.config.js')(true);
@@ -17,7 +18,10 @@ const plugins = [
   new webpack.optimize.UglifyJsPlugin()
 ];
 
-module.exports = Object.assign({}, common, {
+module.exports = merge(common, {
+  entry: {
+    sw: path.join(paths.SOURCE_FOLDER, 'serviceWorkerRegistration.js')
+  },
   plugins: plugins,
   devtool: 'source-map'
 });

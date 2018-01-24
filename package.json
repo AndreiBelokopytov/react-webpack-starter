@@ -60,8 +60,10 @@
     "semistandard": "^11.0.0",
     "snazzy": "^7.0.0",
     "style-loader": "^0.18.2",
+    "sw-precache": "^5.2.0",
     "url-loader": "^0.6.2",
     "webpack": "^3.10.0",
+    "webpack-merge": "^4.1.1",
     "webpack-stream": "^4.0.0"
   },
   "semistandard": {

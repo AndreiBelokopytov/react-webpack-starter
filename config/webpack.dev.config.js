@@ -1,4 +1,5 @@
 const path = require('path');
+const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const paths = require('./paths');
@@ -12,7 +13,7 @@ const plugins = [
   new ExtractTextPlugin('style.css')
 ];
 
-module.exports = Object.assign({}, common, {
+module.exports = merge(common, {
   plugins: plugins,
   devtool: 'eval'
 });

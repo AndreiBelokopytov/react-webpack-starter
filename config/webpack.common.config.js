@@ -4,17 +4,22 @@ const paths = require('./paths');
 
 function getConfig (production = false) {
   return {
-    entry: path.join(paths.SOURCE_FOLDER, 'index.js'),
+    entry: {
+      index: path.join(paths.SOURCE_FOLDER, 'index.js')
+    },
     context: paths.APP_FOLDER,
     output: {
       path: paths.DIST_FOLDER,
-      filename: 'bundle.js'
+      filename: '[name].[hash].js'
     },
     module: {
       rules: [
         {
           test: /\.js$/,
-          exclude: /node_modules/,
+          exclude: [
+            /node_modules/,
+            /serviceWorkerRegistration*/
+          ],
           use: require.resolve('babel-loader')
         },
         {
