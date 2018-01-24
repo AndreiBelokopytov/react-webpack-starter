@@ -7,7 +7,6 @@ function getConfig (production = false) {
     entry: {
       index: path.join(paths.SOURCE_FOLDER, 'index.js')
     },
-    context: paths.APP_FOLDER,
     output: {
       path: paths.DIST_FOLDER,
       filename: '[name].[hash].js'
