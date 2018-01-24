@@ -14,6 +14,5 @@ const plugins = [
 
 module.exports = Object.assign({}, common, {
   plugins: plugins,
-  devtool: 'eval',
-  watch: true
+  devtool: 'eval'
 });

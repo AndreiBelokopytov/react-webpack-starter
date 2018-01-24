@@ -8,7 +8,7 @@ const browserSync = require('browser-sync').create();
 const env = require('./env');
 const paths = require('./paths');
 
-const webpackConfig = `webpack.${env}.config.js`;
+const webpackConfig = require(`./webpack.${env}.config.js`);
 
 gulp.task('clean', () => {
   return del([
@@ -25,9 +25,17 @@ gulp.task('copy:public', () => {
     .pipe(gulp.dest(paths.DIST_FOLDER));
 });
 
-gulp.task('webpack', () => {
+gulp.task('webpack:build', () => {
   return gulp.src(path.join(paths.SOURCE_FOLDER, 'index.js'))
-    .pipe(webpack(require(path.join(__dirname, webpackConfig))))
+    .pipe(webpack(webpackConfig))
+    .pipe(gulp.dest(paths.DIST_FOLDER));
+});
+
+gulp.task('webpack:watch', () => {
+  return gulp.src(path.join(paths.SOURCE_FOLDER, 'index.js'))
+    .pipe(webpack(Object.assign({}, webpackConfig, {
+      watch: true
+    })))
     .pipe(gulp.dest(paths.DIST_FOLDER));
 });
 
@@ -42,5 +50,5 @@ gulp.task('server', () => {
     .on('change', browserSync.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'copy:public', 'webpack'));
-gulp.task('dev', gulp.series('clean', 'copy:public', gulp.parallel('webpack', 'server')));
+gulp.task('build', gulp.series('clean', 'copy:public', 'webpack:build'));
+gulp.task('dev', gulp.series('build', gulp.parallel('webpack:watch', 'server')));
