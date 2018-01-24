@@ -22,7 +22,7 @@ gulp.task('clean', () => {
 });
 
 gulp.task('copy:public', () => {
-  return gulp.src(path.join(__dirname, 'public/**/*'))
+  return gulp.src(path.join(paths.PUBLIC_FOLDER, '**/*'))
     .pipe(gulp.dest(paths.DIST_FOLDER));
 });
 
