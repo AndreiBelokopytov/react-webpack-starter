@@ -7,7 +7,13 @@ function App () {
     <div>
       <h1>Hello World!</h1>
       <div className={styles.container}>
-        <img src={logo} width='185' height='106' className={styles.logo} />
+        <img
+          src={logo}
+          width='185'
+          height='106'
+          className={styles.logo}
+          alt='logo'
+        />
       </div>
     </div>
   );
