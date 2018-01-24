@@ -68,7 +68,7 @@ const config = {
     ]
   },
   plugins: Array.prototype.concat.apply(devPlugins, productionMode ? productionPlugins : []),
-  devtool: productionMode ? '' : 'eval-source-map',
+  devtool: productionMode ? 'source-map' : 'eval',
   watch: !productionMode
 };
 
