@@ -71,4 +71,4 @@ gulp.task('dev', gulp.series(
   'copy:public',
   'webpack:build',
   gulp.parallel('webpack:watch', 'server'
-)));
+  )));
