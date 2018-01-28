@@ -1,0 +1,18 @@
+{
+  "extends": [
+    "standard",
+    "standard-jsx"
+  ],
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": [2, "always"],
+    "no-extra-semi": 2,
+    "class-property/class-property-semicolon": [2, "always"]
+  },
+  "env": {
+    "mocha": true
+  },
+  "plugins": [
+    "class-property"
+  ]
+}
